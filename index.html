@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">          
+   <section data-markdown data-separator="^\n---$" data-separator-vertical="^\n>>>$">
+    <script type="text/template">
+
+## QGIS印刷編
+#### 所在確認調査報告書をつくる
+
+---
+## 作業の内容
+
+- ベクタデータを加工して線種変更、彩色をする
+- 演算子を使ったベクタデータの分類と表現
+- 「レイアウト」による印刷原稿の作成
+
+---
+「buildings」を右クリック
+
+<img src="01.png" width=80%>
+
+---
+「エクスポート」→「地物の保存」
+
+<img src="02.png" width=80%>
+
+---
+- 「座標参照系」を「JGD2000/UTM zone 54N」に変更
+- ファイル名を「buildings_utm54」に変更
+
+<img src="04.png" width=40%>
+
+---
+<img src="03.png" width=50%>
+
+---
+### 同様に「road」も
+
+### 座標参照系変更
+
+「WGS84」→「JGD2000/UTM zone 54N」
+
+---
+「WL_polygon_utm54」→「レイヤプロパティ」→「シンポロジ」
+<img src="05.png" width=80%>
+
+---
+### 課題
+
+水域に灰色の線が入るのを解消したい
+
+<img src="06.png" width=80%>
+
+---
+「road」→「シンポロジー」→「Categolized」
+
+<img src="07.png" width=80%>
+
+---
+- 「カラム」→「タイプ」
+- 「分類」
+
+<img src="08.png" width=70%>
+
+---
+「Ruleｰbased」切り替え
+
+<img src="09.png" width=80%>
+
+---
+左下の「＋」マークをクリック
+
+<img src="10.png" width=80%>
+
+---
+- 「色」→好きな色に変更
+- 「幅」→太め（1以上に　単位はミリ）
+
+<img src="11.png" width=70%>
+
+---
+- 「フィルタ」→検索式を入力
+
+<img src="11.png" width=60%>
+
+```
+"type"  LIKE 'trunk'
+```
+
+---
+国道が赤くなった
+
+<img src="12.png" width=80%>
+
+---
+国道と道道を赤くする
+
+<img src="13.png" width=60%>
+
+```
+"type"  LIKE  'trunk' OR "type"  LIKE  'primary'
+```
+
+---
+国道と道道を塗り分ける
+
+<img src="14.png" width=60%>
+
+```
+"type"  LIKE  'trunk'
+"type"  LIKE  'primary'
+```
+
+---
+<img src="15.png" width=100%>
+
+---
+「スタイル」→「スタイルのロード」
+
+<img src="16.png" width=80%>
+
+---
+「OSM_道路_Maplink風.qml」
+
+<img src="17.png" width=80%>
+
+---
+<img src="18.png" width=100%>
+
+---
+### 課題
+
+- 建物を灰色に塗りつぶし
+- 建物輪郭を黒色にする
+
+<img src="18-2.png" width=60%>
+
+---
+「協議範囲」シェープファイルの読み込み
+
+<img src="19.png" width=90%>
+
+---
+- 「協議範囲」右クリック
+- レイヤの領域にズーム
+
+<img src="20.png" width=80%>
+
+---
+えらんだレイヤの地物が全部表示される
+
+<img src="21.png" width=90%>
+
+---
+- GPSデータの読み込み
+- 「ベクタ」→「GPSツール」
+
+<img src="22.png" width=90%>
+
+
+---
+- 「GPXファイルをロード」タブを選択
+- 「地物タイプ」→「トラック」
+
+<img src="23.png" width=90%>
+
+---
+### 課題〜好みの描画に調節〜
+
+- GPS線種を調整
+- 協議範囲の塗りつぶしと線種を調節
+
+<img src="24.png" width=70%>
+
+---
+「プロジェクト」→「レイアウトマネージャー」
+
+<img src="25.png" width=90%>
+
+---
+「クリエイト」をクリック
+
+<img src="26.png" width=35%>
+
+「レイアウト名称」を入力
+
+<img src="27.png" width=35%>
+
+---
+印刷用のレイアウト
+
+<img src="28.png" width=90%>
+
+---
+- 「レイアウト」タブ→「レイアウトのリサイズ」
+- 現在のレイアウトを消去する
+
+<img src="28.png" width=80%>
+
+---
+「レイアウト」→「ページを追加」
+
+<img src="29.png" width=80%>
+
+---
+「方向」→「縦」
+
+<img src="30.png" width=50%>
+
+---
+「新しい地図を追加」
+
+<img src="31.png" width=80%>
+
+---
+描画領域をドラッグして指定
+
+<img src="32.png" width=80%>
+
+---
+<img src="33.png" width=80%>
+
+---
+「アイテムプロパティ」タブ→「縮尺」
+
+<img src="34.png" width=35%>
+
+「アイテムプロパティ」タブ→「フレーム」
+
+<img src="35.png" width=35%>
+
+---
+「新しい凡例をレイアウトに追加」
+
+<img src="36.png" width=80%>
+
+---
+- ドラッグして凡例を追加
+- すべての地物が表示される
+
+<img src="37.png" width=80%>
+
+---
+- 「アイテムプロパティ」→「凡例アイテム」
+- 「自動更新」→チェックを外す
+- 不要な地物を選択する（トラックデータと協議範囲以外）
+- 「マイナス」ボタンをクリック
+
+<img src="38.png" width=60%>
+
+---
+<img src="39.png" width=80%>
+
+---
+- 凡例アイテム（トラックデータ）をダブルクリック
+- 「アイテムテキスト」→表示名を入力
+
+<img src="40.png" width=80%>
+
+---
+- 「フォント」→「アイテムフォント」
+- フォントとフォントサイズを変更（9ptぐらい）
+
+<img src="41.png" width=80%>
+
+---
+- 「新しいスケールバーを追加」
+- ドラッグしてスケールを追加
+
+<img src="42.png" width=80%>
+
+---
+- 「スタイル」→「ダブルボックス」
+- 「線分列」→「左0」
+- 「固定幅」→「200」単位
+
+<img src="43.png" width=70%>
+
+---
+- 「ディスプレイ」→「ラベルのマージン」→「1.0mm」
+- 「線幅」→「0.1mm」
+
+<img src="44.png" width=70%>
+
+---
+- 「フォントと色」→「フォント」→「7pt」
+
+<img src="45.png" width=70%>
+
+---
+- 凡例とスケールを適当な位置に配置して
+- レイヤをロック
+
+<img src="46.png" width=80%>
+
+---
+- 「新しい地図をレイアウトに追加」
+- ドラッグして地図を配置
+
+<img src="47.png" width=80%>
+
+---
+ 「アイテムプロパティ」→「縮尺」→300000
+
+<img src="48.png" width=80%>
+
+---
+2つの地図で表現を変えたい
+
+- 「地図テーマの管理」→「テーマの追加」
+
+<img src="49.png" width=80%>
+
+---
+<img src="50.png" width=40%>
+
+---
+- 「協議範囲」と「トラックデータ」を非表示
+- 「地図テーマの管理」→「テーマの追加」
+
+<img src="51.png" width=80%>
+
+---
+- 「地図テーマにしたがう」にクリック
+- 地図テーマを「広域図」に指定
+
+<img src="52.png" width=80%>
+
+---
+「地図テーマ」を設定すると
+レイアウト画面で表示する
+レイヤの組み合わせを選べる
+
+<img src="52.png" width=70%>
+
+---
+図形を追加する
+
+- 図形の追加
+- 四角形の追加
+
+<img src="53.png" width=70%>
+
+---
+テキストを追加する
+
+- 「新しいラベルを追加」
+- 「アイテムプロパティ」→「主なプロパティ」→テキストを記述
+
+<img src="54.png" width=60%>
+
+---
+写真を追加する
+
+- 「新しい画像を追加」
+- ドラッグして範囲を指定
+- 「画像ソース」クリック
+
+<img src="55.png" width=50%>
+
+---
+写真の追加（photo01.JPG）
+
+<img src="56.png" width=80%>
+
+---
+写真の追加（photo02.JPG）
+
+<img src="57.png" width=80%>
+
+---
+- 「踏査範囲」をダブルクリック
+- 「ラベル」→最上段を「Single labels」に切り替え
+
+<img src="58.png" width=80%>
+
+---
+- 「ラベル」→「地点名」を選択
+- 「フォント」→サイズや種類は適当に
+
+<img src="59.png" width=80%>
+
+---
+- 「配置」に切り替え
+- 「境界線の使用」→「許容される位置」を「左」→「ラインの方向に依存した位置」
+- 「距離」を0.5（地図の様子をたしかめながら調節）
+
+<img src="60.png" width=80%>
+
+---
+- 「描画」に切り替え
+- 「このレイヤのすべてのラベルを表示する」にチェック
+
+<img src="61.png" width=80%>
+
+---
+ラベルの表示
+
+<img src="62.png" width=80%>
+
+---
+複数の地図をまとめて出力する
+
+- 「プロジェクト」→「レイアウトマネージャー」
+- 「所在調査報告書」を選択して「Duplicate」
+
+<img src="63.png" width=70%>
+
+---
+「所在調査報告書_地図帳」
+
+<img src="64.png" width=50%>
+
+---
+「地図帳」→「地図帳の設定」
+
+<img src="65.png" width=70%>
+
+---
+- 「地図帳」タブ
+- 「地図帳を作成する」をクリック
+- 「被覆レイヤ」→「協議範囲」
+
+<img src="66.png" width=70%>
+
+---
+- 地図を選択
+- 「アイテムプロパティ」タブ→「地図帳による制御」
+- 「地物周りの余白」→「100%」
+
+<img src="68.png" width=70%>
+
+---
+- 図のタイトルを選択
+
+```
+[%地点名%]　所在確認調査実施位置図
+
+```
+
+<img src="67.png" width=70%>
+
+---
+「地図帳」→「地図帳のプレビュー」
+
+<img src="69.png" width=80%>
+
+---
+「地図帳のエクスポート」→「PDFとしてエクスポート」
+
+<img src="70.png" width=80%>
+
+---
+協議区域ごとにPDFページを出力
+
+<img src="71.png" width=80%>
+
+    </script>
+</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		dependencies: [
+{ src: 'reveal.js-2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'reveal.js-2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+]
+	</body>
+</html>
