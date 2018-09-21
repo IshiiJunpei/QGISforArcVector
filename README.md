@@ -33,17 +33,17 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 - 演算子を使ったベクタデータの分類と表現
 - 「レイアウト」による印刷原稿の作成
 
-
+---
 「buildings」を右クリック
 
 <img src="01.png" width=80%>
 
-
+---
 「エクスポート」→「地物の保存」
 
 <img src="02.png" width=80%>
 
-
+---
 - 「座標参照系」を「JGD2000/UTM zone 54N」に変更
 - ファイル名を「buildings_utm54」に変更
 
@@ -52,72 +52,66 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 
 <img src="03.png" width=50%>
 
-
 - 「road」も座標参照系変更
 - 「WGS84」→「JGD2000/UTM zone 54N」
 
-
+---
 「WL_polygon_utm54」→「レイヤプロパティ」→「シンポロジ」
-
 <img src="05.png" width=80%>
 
-
+---
 ### 課題
 
 水域に灰色の線が入るのを解消したい
-
 <img src="06.png" width=80%>
 
-
+---
 「road」→「シンポロジー」→「Categolized」
-
 <img src="07.png" width=80%>
 
-
+---
 - 「カラム」→「タイプ」
 - 「分類」
 
 <img src="08.png" width=70%>
 
-
+---
 「Ruleｰbased」に切り替え
-
 <img src="09.png" width=80%>
 
-
+---
 左下の「＋」マークをクリック
-
 <img src="10.png" width=80%>
 
-
+---
 - 「色」→好きな色に変更
 - 「幅」→太め（1以上に　単位はミリ）
 
 <img src="11.png" width=70%>
 
-
+---
 - 「フィルタ」→検索式を入力
 
-<img src="11.png" width=60%>
+<img src="11.png" width=70%>
 
 ```
 "type"  LIKE 'trunk'
 ```
 
-
+---
 ### 国道が赤くなった
 
 <img src="12.png" width=80%>
 
-
+---
 ### 国道と道道を赤くする
-
 <img src="13.png" width=60%>
 
 ```
 "type"  LIKE  'trunk' OR "type"  LIKE  'primary'
 ```
 
+---
 ### 国道と道道を塗り分ける
 
 <img src="14.png" width=60%>
@@ -127,9 +121,12 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 "type"  LIKE  'primary'
 ```
 
-
+---
+国道と道道が塗り分けられた
 <img src="15.png" width=100%>
 
+
+---
 ## 「スタイル」を指定する
 
 - あらかじめ登録した書式を読み込む
@@ -137,22 +134,22 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 
 <img src="16.png" width=80%>
 
-
+---
 「OSM_道路_Maplink風.qml」を選択
 
 <img src="17.png" width=80%>
 
-
+---
+### スタイル（OSM_道路_Maplink風.qml）が反映された地図
 <img src="18.png" width=100%>
 
----
+
 ### 課題
 
 - 建物を灰色に塗りつぶし
 - 建物輪郭を黒色にする
 
-<img src="18-2.png" width=60%>
-
+<img src="18-2.png" width=90%>
 
 「協議範囲」シェープファイルの読み込み
 
@@ -162,154 +159,146 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 - 「協議範囲」右クリック
 - レイヤの領域にズーム
 
-<img src="20.png" width=80%>
+<img src="20.png" width=90%>
 
-
+---
 えらんだレイヤの地物が全部表示される
 
 <img src="21.png" width=90%>
 
+---
+### GPSデータを読み込む
 
-- GPSデータの読み込み
-- 「ベクタ」→「GPSツール」
+ 「ベクタ」→「GPSツール」
 
 <img src="22.png" width=90%>
 
-
+---
 - 「GPXファイルをロード」タブを選択
 - 「地物タイプ」→「トラック」
 
 <img src="23.png" width=90%>
 
-
+---
 ### 課題〜好みの描画に調節〜
 
 - GPS線種を調整
 - 協議範囲の塗りつぶしと線種を調節
 
-<img src="24.png" width=70%>
+<img src="24.png" width=90%>
 
-
+---
 「プロジェクト」→「レイアウトマネージャー」
 
 <img src="25.png" width=90%>
 
-
+---
 「クリエイト」をクリック
 
 <img src="26.png" width=35%>
 
+---
 「レイアウト名称」を入力
-
 <img src="27.png" width=35%>
 
-
+---
 印刷用のレイアウト
-
 <img src="28.png" width=90%>
 
-
+---
 - 「レイアウト」タブ→「レイアウトのリサイズ」
 - 現在のレイアウトを消去する
 
-<img src="28.png" width=80%>
+<img src="28.png" width=90%>
 
-
+---
 「レイアウト」→「ページを追加」
 
-<img src="29.png" width=80%>
+<img src="29.png" width=90%>
 
-
+---
 「方向」→「縦」
-
 <img src="30.png" width=50%>
 
-
+---
 「新しい地図を追加」
+<img src="31.png" width=90%>
 
-<img src="31.png" width=80%>
-
-
+---
 描画領域をドラッグして指定
+<img src="32.png" width=90%>
 
-<img src="32.png" width=80%>
+<img src="33.png" width=90%>
 
-
-<img src="33.png" width=80%>
-
-
+---
 「アイテムプロパティ」タブ→「縮尺」
+<img src="34.png" width=90%>
 
-<img src="34.png" width=80%>
-
-
+---
 「アイテムプロパティ」タブ→「フレーム」
+<img src="35.png" width=90%>
 
-<img src="35.png" width=80%>
-
-
+---
 「新しい凡例をレイアウトに追加」
+<img src="36.png" width=90%>
 
-<img src="36.png" width=80%>
-
-
+---
 - ドラッグして凡例を追加
 - すべての地物が表示される
 
-<img src="37.png" width=80%>
+<img src="37.png" width=90%>
 
-
+---
 - 「アイテムプロパティ」→「凡例アイテム」
 - 「自動更新」→チェックを外す
 - 不要な地物を選択する（トラックデータと協議範囲以外）
 - 「マイナス」ボタンをクリック
 
-<img src="38.png" width=60%>
+<img src="38.png" width=90%>
 
+<img src="39.png" width=90%>
 
-<img src="39.png" width=80%>
-
-
+---
 - 凡例アイテム（トラックデータ）をダブルクリック
 - 「アイテムテキスト」→表示名を入力
 
-<img src="40.png" width=80%>
+<img src="40.png" width=90%>
 
-
+---
 - 「フォント」→「アイテムフォント」
 - フォントとフォントサイズを変更（9ptぐらい）
 
-<img src="41.png" width=80%>
+<img src="41.png" width=90%>
 
-
+---
 - 「新しいスケールバーを追加」
 - ドラッグしてスケールを追加
 
-<img src="42.png" width=80%>
+<img src="42.png" width=90%>
 
-
+---
 - 「スタイル」→「ダブルボックス」
 - 「線分列」→「左0」
 - 「固定幅」→「200」単位
 
-<img src="43.png" width=70%>
+<img src="43.png" width=90%>
 
-
+---
 - 「ディスプレイ」→「ラベルのマージン」→「1.0mm」
 - 「線幅」→「0.1mm」
 
-<img src="44.png" width=70%>
+<img src="44.png" width=90%>
 
 ---
-- 「フォントと色」→「フォント」→「7pt」
+「フォントと色」→「フォント」→「7pt」
 
-<img src="45.png" width=70%>
+<img src="45.png" width=90%>
 
 ---
 - 凡例とスケールを適当な位置に配置して
 - レイヤをロック
 
-<img src="46.png" width=80%>
+<img src="46.png" width=90%>
 
 ---
 - 「新しい地図をレイアウトに追加」
@@ -320,16 +309,18 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 ---
  「アイテムプロパティ」→「縮尺」→300000
 
-<img src="48.png" width=80%>
+<img src="48.png" width=90%>
 
 ---
-2つの地図で表現を変えたい
-
-- 「地図テーマの管理」→「テーマの追加」
-
-<img src="49.png" width=80%>
+### 2つの地図で表現を変える
+1つのレイアウト内に2つ以上の地図が描画されている場合に、異なる地物や表現を適用できます。
 
 ---
+「地図テーマの管理」→「テーマの追加」
+
+<img src="49.png" width=90%>
+
+新しいテーマの名称を「詳細図」とする
 <img src="50.png" width=40%>
 
 ---
@@ -345,14 +336,12 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 <img src="52.png" width=80%>
 
 ---
-「地図テーマ」を設定すると
-レイアウト画面で表示する
-レイヤの組み合わせを選べる
+「地図テーマ」を設定するとレイアウト画面で表示するレイヤの組み合わせを選べます。
 
 <img src="52.png" width=70%>
 
 ---
-図形を追加する
+### 図形を追加する
 
 - 図形の追加
 - 四角形の追加
@@ -360,7 +349,7 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 <img src="53.png" width=70%>
 
 ---
-テキストを追加する
+### テキストを追加する
 
 - 「新しいラベルを追加」
 - 「アイテムプロパティ」→「主なプロパティ」→テキストを記述
@@ -368,7 +357,7 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 <img src="54.png" width=60%>
 
 ---
-写真を追加する
+### 写真を追加する
 
 - 「新しい画像を追加」
 - ドラッグして範囲を指定
@@ -381,12 +370,14 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 
 <img src="56.png" width=80%>
 
----
+
 写真の追加（photo02.JPG）
 
 <img src="57.png" width=80%>
 
 ---
+### ラベルを設定する
+
 - 「踏査範囲」をダブルクリック
 - 「ラベル」→最上段を「Single labels」に切り替え
 
@@ -403,57 +394,57 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 - 「境界線の使用」→「許容される位置」を「左」→「ラインの方向に依存した位置」
 - 「距離」を0.5
 
-<img src="60.png" width=80%>
+<img src="60.png" width=90%>
 
 ---
 - 「描画」に切り替え
 - 「このレイヤのすべてのラベルを表示する」にチェック
 
-<img src="61.png" width=80%>
+<img src="61.png" width=90%>
 
 ---
-ラベルの表示
+### ラベルの表示
 
-<img src="62.png" width=80%>
+<img src="62.png" width=90%>
 
 ---
 ## 地図帳機能
-<br>
-- 複数の地図をまとめて出力する
-- 複数の調査地点を同一の様式で自動出力
 
----
+「地図帳」機能を使うと複数の地図をまとめて出力することができます。複数の調査地点を同一の様式で自動的に出力する場合などに活用できます。
+
 - 「プロジェクト」→「レイアウトマネージャー」
-- 「所在調査報告書」を選択して「Duplicate」
+- 「所在調査報告書」を選択して「Duplicate」をクリックするとレイアウトを複製できます。
 
-<img src="63.png" width=80%>
+<img src="63.png" width=90%>
 
----
-「所在調査報告書_地図帳」
+
+「所在調査報告書_地図帳」とリネームします。
 
 <img src="64.png" width=50%>
 
 ---
 「地図帳」→「地図帳の設定」
 
-<img src="65.png" width=80%>
+<img src="65.png" width=90%>
 
 ---
 - 「地図帳」タブ
 - 「地図帳を作成する」をクリック
 - 「被覆レイヤ」→「協議範囲」
 
-<img src="66.png" width=70%>
+<img src="66.png" width=90%>
 
 ---
 - 地図を選択
 - 「地図帳による制御」にチェック
 - 「地物周りの余白」→「100%」
 
-<img src="68.png" width=70%>
+<img src="68.png" width=90%>
 
 ---
-- 図のタイトルを選択
+### オブジェクトのテーブルを参照する
+
+図のタイトルを選択して、以下のように入力します。地図帳機能で「協議範囲」ごとに地図を出図した際に、協議区域名が自動的に入力されるようになります。
 
 ```
 [%地点名%]　所在確認調査実施位置図
@@ -468,9 +459,7 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 <img src="69.png" width=80%>
 
 ---
-「地図帳のエクスポート」
-
-→「PDFとしてエクスポート」
+「地図帳のエクスポート」→「PDFとしてエクスポート」
 
 <img src="70.png" width=80%>
 
@@ -480,13 +469,7 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 <img src="71.png" width=80%>
 
 ---
-## 印刷編まとめ
-<br>
-- 「レイアウト」はQGISの中でももっとも実務的な機能です。
-- しっかりマスターして、必要な図を迅速に出図できるようになってください。
-
----
 ### おまけ〜古地図風印刷〜
 チラシ作成にも使えます！！
 
-<img src="72.png" width=70%>
+<img src="72.png" width=90%>
