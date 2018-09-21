@@ -36,12 +36,12 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 ---
 「buildings」を右クリック
 
-<img src="01.png" width=80%>
+<img src="01.png" width=90%>
 
 ---
 「エクスポート」→「地物の保存」
 
-<img src="02.png" width=80%>
+<img src="02.png" width=90%>
 
 ---
 - 「座標参照系」を「JGD2000/UTM zone 54N」に変更
@@ -57,17 +57,17 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 
 ---
 「WL_polygon_utm54」→「レイヤプロパティ」→「シンポロジ」
-<img src="05.png" width=80%>
+<img src="05.png" width=90%>
 
 ---
 ### 課題
 
 水域に灰色の線が入るのを解消したい
-<img src="06.png" width=80%>
+<img src="06.png" width=90%>
 
 ---
 「road」→「シンポロジー」→「Categolized」
-<img src="07.png" width=80%>
+<img src="07.png" width=90%>
 
 ---
 - 「カラム」→「タイプ」
@@ -77,11 +77,11 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 
 ---
 「Ruleｰbased」に切り替え
-<img src="09.png" width=80%>
+<img src="09.png" width=90%>
 
 ---
 左下の「＋」マークをクリック
-<img src="10.png" width=80%>
+<img src="10.png" width=90%>
 
 ---
 - 「色」→好きな色に変更
@@ -101,7 +101,7 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 ---
 ### 国道が赤くなった
 
-<img src="12.png" width=80%>
+<img src="12.png" width=90%>
 
 ---
 ### 国道と道道を赤くする
@@ -123,7 +123,7 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 
 ---
 国道と道道が塗り分けられた
-<img src="15.png" width=100%>
+<img src="15.png" width=90%>
 
 
 ---
@@ -132,12 +132,12 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 - あらかじめ登録した書式を読み込む
 - 「スタイル」→「スタイルのロード」
 
-<img src="16.png" width=80%>
+<img src="16.png" width=90%>
 
 ---
 「OSM_道路_Maplink風.qml」を選択
 
-<img src="17.png" width=80%>
+<img src="17.png" width=90%>
 
 ---
 ### スタイル（OSM_道路_Maplink風.qml）が反映された地図
@@ -304,7 +304,7 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 - 「新しい地図をレイアウトに追加」
 - ドラッグして地図を配置
 
-<img src="47.png" width=80%>
+<img src="47.png" width=90%>
 
 ---
  「アイテムプロパティ」→「縮尺」→300000
@@ -327,13 +327,13 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 - 「協議範囲」と「トラックデータ」を非表示
 - 「地図テーマの管理」→「テーマの追加」
 
-<img src="51.png" width=80%>
+<img src="51.png" width=90%>
 
 ---
 - 「地図テーマにしたがう」にクリック
 - 地図テーマを「広域図」に指定
 
-<img src="52.png" width=80%>
+<img src="52.png" width=90%>
 
 ---
 「地図テーマ」を設定するとレイアウト画面で表示するレイヤの組み合わせを選べます。
@@ -368,12 +368,12 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 ---
 写真の追加（photo01.JPG）
 
-<img src="56.png" width=80%>
+<img src="56.png" width=90%>
 
 
 写真の追加（photo02.JPG）
 
-<img src="57.png" width=80%>
+<img src="57.png" width=90%>
 
 ---
 ### ラベルを設定する
@@ -381,7 +381,7 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 - 「踏査範囲」をダブルクリック
 - 「ラベル」→最上段を「Single labels」に切り替え
 
-<img src="58.png" width=80%>
+<img src="58.png" width=90%>
 
 ---
 - 「ラベル」→「地点名」を選択
@@ -451,22 +451,22 @@ Created by Ishii Junpei ( [@ishiijunpei](https://twitter.com/ishiijunpei))
 
 ```
 
-<img src="67.png" width=80%>
+<img src="67.png" width=90%>
 
 ---
 「地図帳」→「地図帳のプレビュー」
 
-<img src="69.png" width=80%>
+<img src="69.png" width=90%>
 
 ---
 「地図帳のエクスポート」→「PDFとしてエクスポート」
 
-<img src="70.png" width=80%>
+<img src="70.png" width=90%>
 
 ---
 協議区域ごとにPDFページを出力
 
-<img src="71.png" width=80%>
+<img src="71.png" width=90%>
 
 ---
 ### おまけ〜古地図風印刷〜
